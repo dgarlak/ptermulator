@@ -16,6 +16,7 @@ def send_cmd(url, cmd):
     table = raw.find_all('table')[0] # target.php should return just one table
     for line in table.find_all('tr'):
         print(line.find_all('td')[0].get_text()) # Each row should have just one cell
+    con.close()
     return
 
 if __name__ == "__main__":
